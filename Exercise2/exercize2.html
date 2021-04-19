@@ -1,0 +1,32 @@
+<html>
+    <p>Please check console and code in this file for function 'once' result </p>
+</html>
+<script>
+
+//Function add pass as parameter to once
+function add(a, b) {
+    return a + b;
+}
+  
+//Use closure to for function once
+//fistcall check whther function called firsttime or not
+//function func argument and context are bind using apply
+//result store first call function result and return from nested function
+function once(func) {
+    var firstCall=0;
+    var result=0;
+    return function f() {       
+        if(!firstCall) {
+            firstCall = 1;            
+            result=func.apply(this,arguments); 
+        }
+        return result;        
+    }   
+}
+    
+const onceAdd = once(add);         
+console.log(onceAdd(1, 2)); // 3
+console.log(onceAdd(2, 2)); // 3
+console.log(onceAdd(2, 4)); // 3
+</script>
+    
