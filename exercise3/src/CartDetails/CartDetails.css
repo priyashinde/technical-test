@@ -1,0 +1,64 @@
+.dummy {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.myList {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 10px;
+}
+    
+.myList li {
+    padding-left: 10px;
+    border-left: 1px solid #000;
+    margin-left: 20px;
+}
+.myList :first-child {       
+    margin-left: 0px;
+}
+.myList :last-child {
+    border-left: none;
+}
+.myList span {
+    font-weight: 700px;
+    display: block;
+}
+
+.leftWrapper p {        
+    margin-bottom:5px
+}
+
+.actionsWrapper ul{
+    margin:0px;
+    padding:0px;
+    list-style-type: none;
+    display: flex;
+}
+
+.actionsWrapper ul li{
+    margin: 0px 5px;
+}
+.actionsWrapper ul :nth-child(2) {
+    border-left: 1px solid #000;
+    padding-left: 10px;
+}
+
+.actionsWrapper ul :last-child {
+    margin-right: 0px;
+}
+
+.primary{
+    background: #2F4F4F;
+    color: #FFF8DC
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.subtext {
+    font-size: 12px;
+}
